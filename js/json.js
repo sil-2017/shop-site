@@ -8,8 +8,7 @@ let app =  document.getElementById("product-list");
         let title = json[i].name;
         let cents = json[i].cents;
         let img = json[i].img;
-        let el = document.createElement("div");
-        el.innerHTML = `<div class="card-prod"> 
+         app.insertAdjacentHTML('afterBegin',`<div class="card-prod"> 
         <p class="card-prod-name"> ${title} </p>
         <img class="product-image" src=" ${img}"> 
         <p class="product-price">${cents} cents</p>
@@ -22,9 +21,7 @@ let app =  document.getElementById("product-list");
         <span class="product__total-price"></span>
         </div>
         <button class="add-to-cart">Add to cart</button>
-        </div>`;
-        
-        app.appendChild(el);
+        </div>`);
     }
     }).catch(function(err) {
     console.log(err);
