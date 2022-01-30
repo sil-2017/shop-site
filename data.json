@@ -1,0 +1,80 @@
+[
+  
+  {
+    "name": "Pomegranate ",
+    "cents": "2000",
+    "img":"./img/pom.png"
+  },
+  {
+    "name": "Apple",
+    "cents": "200",
+    "img":"./img/ap.png"
+  },
+  {
+    "name": "Apelsin",
+    "cents": "400",
+    "img":"./img/b.png"
+  },
+  {
+    "name": "Potatoes",
+    "cents": "200",
+    "img":"./img/d.png"
+  },
+  {
+    "name": "Grapes",
+    "cents": "250",
+    "img":"./img/q.png"
+  },
+  {
+    "name": "Pepper",
+    "cents": "320",
+    "img":"./img/pep.png"
+  },
+  {
+    "name": "Brokoli",
+    "cents": "450",
+    "img":"./img/c.png"
+  },
+  {
+    "name": "Cabbage",
+    "cents": "160",
+    "img":"./img/w.png"
+  },
+  {
+    "name": "Tomato",
+    "cents": "270",
+    "img":"./img/e.png"
+  },
+  {
+    "name": "Avokado",
+    "cents": "800",
+    "img":"./img/a.png"
+  },
+  
+  {
+    "name": "Pear",
+    "cents": "440",
+    "img":"./img/gr.png"
+  },
+  {
+    "name": "Strawberry",
+    "cents": "530",
+    "img":"./img/st.png"
+  },
+  {
+    "name": "Cocos",
+    "cents": "500",
+    "img":"./img/co.png"
+  },
+  {
+    "name": "Mango",
+    "cents": "1500",
+    "img":"./img/mango.png"
+  },
+  {
+    "name": "Peach",
+    "cents": "500",
+    "img":"./img/pr.png"
+  }
+]
+  
