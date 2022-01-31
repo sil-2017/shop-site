@@ -24,6 +24,7 @@ function cart() {
   for (var i = 0; i < addToCart.length; i++) {
     var button = addToCart[i];
     button.addEventListener('click', addToCartClicked);
+    console.log(addToCart);
     
   }
   function addToCartClicked (event) {
@@ -48,7 +49,8 @@ function cart() {
           <button class="remove-btn">Remove</button>
     </div>`
     productRow.innerHTML = cartRowItems;
-    productRows.append(productRow);
+    productRows.insertAdjacentElement('afterBegin',productRow);
+    // productRows.append(productRow);
     productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem);
     updateCartPrice();
   }
@@ -78,12 +80,11 @@ function cart() {
       }
     }
     // console.log('$' + total); 
-    document.getElementsByClassName('total-price')[0].innerHTML=  'cents' + total;
+    document.getElementsByClassName('total-price')[0].innerHTML = 'cents' + total;
     if(total >= 100){
       total = total/100;
       console.log(total);
-      document.getElementsByClassName('total-price')[0].innerHTML=  '$' + total.toFixed(2);
-
+      document.getElementsByClassName('total-price')[0].innerHTML = '$' + total.toFixed(2);
     }
     document.getElementsByClassName('cart-quantity')[0].textContent = i /= 2;
   }
