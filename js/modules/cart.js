@@ -46,7 +46,7 @@ function cart() {
           <span class="cart-quant">${currentValue}</span>kg
           <button class="remove-btn">Remove</button>
     </div>`
-    productRow.innerHTML = cartRowItems;
+    productRow.insertAdjacentHTML('afterBegin',cartRowItems);
     productRows.insertAdjacentElement('afterBegin',productRow);
     // productRows.append(productRow);
     productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem);
