@@ -34,8 +34,7 @@
       let totalPriceNumber;
       if (currentValue > 0) {
         totalPriceNumber = +currentPriceValue * +currentValue;
-//         totalPrice.textContent = `Total price ${totalPriceNumber} cents`
-         totalPrice.insertAdjacentElement('afterBegin',`Total price ${totalPriceNumber} cents`);
+        totalPrice.textContent = `Total price ${totalPriceNumber} cents`;
       } else {
         totalPrice.textContent = '';
       }
