@@ -4,7 +4,6 @@ function cart() {
   const productRow = document.getElementsByClassName('product-row');
   const removeBtn = document.getElementsByClassName('remove-btn');
   const addToCart = document.getElementsByClassName('add-to-cart');
-  // const addToCart = document.getComputedStyle('.add-to-cart');
 
   cart.addEventListener('click', () => {
     if (cartModalOverlay.style.transform === 'translateX(-200%)'){
@@ -19,8 +18,7 @@ function cart() {
       cartModalOverlay.style.transform = 'translateX(-200%)';
     }
   });
-  // end of close cart modal
-// add products to cart
+  
   for (var i = 0; i < addToCart.length; i++) {
     var button = addToCart[i];
     button.addEventListener('click', addToCartClicked);
@@ -48,14 +46,12 @@ function cart() {
           <span class="cart-quant">${currentValue}</span>kg
           <button class="remove-btn">Remove</button>
     </div>`
-    productRow.insertAdjacentHTML('afterBegin',cartRowItems);
+    productRow.innerHTML = cartRowItems;
     productRows.insertAdjacentElement('afterBegin',productRow);
     // productRows.append(productRow);
     productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem);
     updateCartPrice();
   }
-
-  // Remove products from cart
   for (var i = 0; i < removeBtn.length; i++) {
     var button = removeBtn[i];
     button.addEventListener('click', removeItem);
@@ -66,7 +62,6 @@ function cart() {
     btnClicked.parentElement.parentElement.remove();
     updateCartPrice();
   }
-  // update total price
   function updateCartPrice() {
     var total = 0;
     for (var i = 0; i < productRow.length; i += 2) {
@@ -79,7 +74,6 @@ function cart() {
         total = 0;
       }
     }
-    // console.log('$' + total); 
     document.getElementsByClassName('total-price')[0].innerHTML = 'cents' + total;
     if(total >= 100){
       total = total/100;
