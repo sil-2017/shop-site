@@ -47,8 +47,8 @@ function cart() {
           <button class="remove-btn">Remove</button>
     </div>`;
     productRow.innerHTML = cartRowItems;
-    productRows.insertAdjacentElement('afterBegin',productRow);
-    // productRows.append(productRow);
+//     productRows.insertAdjacentElement('afterBegin',productRow);
+    productRows.append(productRow);
     productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem);
     updateCartPrice();
   }
