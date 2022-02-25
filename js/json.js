@@ -4,7 +4,6 @@ let app =  document.getElementById("product-list");
     .then(response => response.json())
     .then(json => {
     for (var i = 0; i <= json.length-1; i++) {
-        console.log("Элемент [ "+ i +" ] = " + json[i].name);
         let title = json[i].name;
         let cents = json[i].cents;
         let img = json[i].img;
